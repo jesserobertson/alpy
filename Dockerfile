@@ -12,7 +12,7 @@ MAINTAINER Jess Robertson <jesse.robertson@csiro.au>
 RUN echo "@testing http://dl-4.alpinelinux.org/alpine/edge/testing" \
         >> /etc/apk/repositories \
     && apk update \
-    && apk add python3 python3-dev musl build-base bash git
+    && apk add python3 python3-dev 
 
 # Bootstrap pip in from python
 RUN python3 -m ensurepip --upgrade
