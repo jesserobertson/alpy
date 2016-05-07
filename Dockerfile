@@ -26,4 +26,7 @@ RUN cd /usr/bin \
     && ln -sf python-config3 python-config \
     && ln -sf pip3 pip
 
+# When we're building a version of this, pull in the requirements.txt
+ONBUILD COPY ./requirements.txt /tmp/requirements.txt
+ONBUILD RUN pip install -r /tmp/requirements.txt
 ENTRYPOINT ["python"]
