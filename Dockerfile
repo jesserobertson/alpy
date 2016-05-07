@@ -25,3 +25,5 @@ RUN cd /usr/bin \
     && ln -sf python3 python \
     && ln -sf python-config3 python-config \
     && ln -sf pip3 pip
+
+ENTRYPOINT ["python"]
